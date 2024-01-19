@@ -1,0 +1,12 @@
+{
+	"python": {
+		"formatting": {
+			"autopep8Path": "/opt/homebrew/bin/autopep8"
+		}
+	},
+	"python.formatting.provider": "black",
+	"python.linting.enabled": true,
+  "python.formatting.blackPath": "/opt/homebrew/bin/black",
+  "coc.preferences.formatOnSaveFiletypes": ["go", "python"]
+
+}
