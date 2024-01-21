@@ -4,7 +4,7 @@ set -x
 
 mkdir -p ~/.config
 
-ln -sf config/nvim ~/.config/nvim
+ln -sf ${PWD}/config/nvim ~/.config/nvim
 
-apt-get -y install neovim
+sudo apt-get -y install neovim
 
