@@ -1,0 +1,3 @@
+export ALGOPIX_APP_ID=RWcrSfV9viavxf0gl1nDWb
+export ALGOPIX_API_KEY=EHC7HGtgRmjZyuu5n2LXZUgR7yMXTNT0cAl8sva5
+
