@@ -15,4 +15,4 @@ sudo sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/
 
 #nvim +PlugInstall +qall
 
-nvim --PlugInstall --qall
+nvim -u ~/.config/nvim/plugins.vim --headless +PlugUpdate +PlugInstall +qall
