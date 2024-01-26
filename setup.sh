@@ -2,7 +2,7 @@
 #
 set -eux
 
-cat >>~/.profile - <<EOF
+cat >>~/.zshrc - <<EOF
 
 alias vi=nvim
 alias vim=nvim
