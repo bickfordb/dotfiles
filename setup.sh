@@ -2,6 +2,12 @@
 #
 set -eux
 
+cat >>~/.profile - <<EOF
+
+alias vi=nvim
+alias vim=nvim
+EOF
+
 mkdir -p ~/.config
 export DEBIAN_FRONTEND=noninteractive
 ln -sf ${PWD}/config/nvim ~/.config/nvim
