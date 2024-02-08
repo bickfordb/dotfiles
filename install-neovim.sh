@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -eux
+
+
+if [[ -f /usr/local/bin/nvim ]]; then 
+	exit 0
+fi
+
 export DEBIAN_FRONTEND=noninteractive
+
+
 
 
 #Build and install neovim for Debian
@@ -77,3 +85,4 @@ popd > /dev/null || exit
 
 echo "nvim command: $(command -v nvim)"
 echo "nvim command: $(ls -al "$(command -v nvim)")"
+rm -rf ~/src/neovim
