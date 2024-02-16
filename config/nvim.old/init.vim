@@ -70,4 +70,4 @@ let g:airline_powerline_fonts = 1
 set clipboard+=unnamedplus
 
 
-runtime coc.vim
+"runtime coc.vim

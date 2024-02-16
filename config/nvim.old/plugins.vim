@@ -1,11 +1,12 @@
 call plug#begin("~/.config/nvim/plugins")
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/kien/rainbow_parentheses.vim'
 
-
-
-" Collection of common configurations for the Nvim LSP client
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neovim/nvim-lspconfig'
+Plug 'ray-x/go.nvim'
+Plug 'ray-x/guihua.lua' 
+
 "Plug 'jose-elias-alvarez/null-ls.nvim'
 "Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 
@@ -29,8 +30,8 @@ Plug 'simrat39/rust-tools.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'fatih/vim-go'
-Plug 'fannheyward/coc-pyright'
+"Plug 'fatih/vim-go'
+"Plug 'fannheyward/coc-pyright'
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "
 Plug 'tpope/vim-fugitive'
@@ -45,5 +46,4 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/hashivim/vim-terraform'
 
 call plug#end()
-
 
