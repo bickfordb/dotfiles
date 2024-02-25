@@ -6,7 +6,8 @@ vim.g.netrw_localcopydircmd = "cp -r"
 vim.o.background = "dark"
 vim.o.backup = false
 vim.o.clipboard = "unnamedplus"
-vim.o.completeopt = "menuone,noinsert,noselect"
+-- vim.o.completeopt = "menuone,noinsert,noselect"
+vim.o.completeopt = "menu,preview"
 vim.o.cursorline = true
 vim.o.dictionary = "/usr/share/dict/words"
 vim.o.expandtab = true
@@ -14,7 +15,7 @@ vim.o.foldcolumn = "1"
 -- DISABLED FOLDING AS IT JUST WASNT USEFUL
 -- vim.o.foldmethod = "indent"                                                                                           -- za to toggle all levels of current fold, zo/zc to open/close current fold, zR to open all folds, zM to close all folds
 vim.o.grepprg =
-"rg --smart-case --vimgrep --no-heading --follow --multiline --multiline-dotall --hidden --pcre2 --regexp"     -- IMPORTANT: pipes should be escaped! e.g. `"text\.(Success\|Info)\("`
+"rg --smart-case --vimgrep --no-heading --follow --multiline --multiline-dotall --hidden --pcre2 --regexp" -- IMPORTANT: pipes should be escaped! e.g. `"text\.(Success\|Info)\("`
 vim.o.ignorecase = true
 vim.o.inccommand = "split"
 vim.o.lazyredraw = true -- (re-enabled when Noice is uninstalled)
@@ -33,9 +34,10 @@ vim.o.splitright = true
 vim.o.swapfile = false
 vim.o.tabstop = 2
 vim.o.updatetime = 1000 -- affects CursorHold and subsequently things like highlighting Code Actions, and the Noice UI popups.
-vim.o.wrap = false
+-- vim.o.wrap = false
 
 if vim.fn.has("termguicolors") == 1 then vim.o.termguicolors = true end
+
 
 --[[
 vim.o allows you to set global vim options, but not local buffer vim options.

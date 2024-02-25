@@ -380,15 +380,16 @@ return {
     end, { desc = "Prev item" })
   end
 }, {
-  -- LSP VIRTUAL TEXT
-  "https://github.com/Maan2003/lsp_lines.nvim", -- See also: https://git.sr.ht/~whynothugo/lsp_lines.nvim
-  config = function()
-    require("lsp_lines").setup()
-
-    -- disable virtual_text since it's redundant due to lsp_lines.
-    vim.diagnostic.config({ virtual_text = false })
-  end
-}, {
+  -- this is crashing so I'm disabling it for now
+  --   -- LSP VIRTUAL TEXT
+  --   "https://github.com/Maan2003/lsp_lines.nvim", -- See also: https://git.sr.ht/~whynothugo/lsp_lines.nvim
+  --   config = function()
+  --     require("lsp_lines").setup()
+  --
+  --     -- disable virtual_text since it's redundant due to lsp_lines.
+  --     vim.diagnostic.config({ virtual_text = false })
+  --   end
+  -- }, {
   -- -- CODE ACTION INDICATOR
   "luckasRanarison/clear-action.nvim",
   opts = {}
