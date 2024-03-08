@@ -3,7 +3,7 @@
 set -eux
 
 bash install-neovim.sh
-apt-get -y install python3-venv shellcheck yamllint
+apt-get -y install python3-venv shellcheck yamllint jsonlint
 mkdir -p ~/.config
 ln -sf "${PWD}"/config/nvim ~/.config/nvim
 
