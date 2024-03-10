@@ -3,7 +3,7 @@
 set -eux
 
 bash install-neovim.sh
-apt-get -y install python3-venv shellcheck yamllint jsonlint
+apt-get -y install python3-venv shellcheck yamllint
 mkdir -p ~/.config
 ln -sf "${PWD}"/config/nvim ~/.config/nvim
 
@@ -21,3 +21,4 @@ fi
 ln -sf "${PWD}"/.profile ~/.profile
 ln -sf "${PWD}"/.zprofile ~/.zprofile
 
+npm install jsonlint -g
