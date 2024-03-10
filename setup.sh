@@ -2,6 +2,7 @@
 #
 set -eux
 
+chsh "$(id -un)" --shell "/usr/bin/zsh"
 bash install-neovim.sh
 apt-get -y install python3-venv shellcheck yamllint
 mkdir -p ~/.config
