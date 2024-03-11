@@ -23,3 +23,7 @@ ln -sf "${PWD}"/.profile ~/.profile
 ln -sf "${PWD}"/.zprofile ~/.zprofile
 
 npm install jsonlint -g
+go install github.com/mrtazz/checkmake/cmd/checkmake@latest
+
+git config push.autoSetupRemote true
+
