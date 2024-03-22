@@ -169,6 +169,11 @@ return {
         -- })
       end,
       settings = {
+        pylsp = {
+          enabled = false
+        },
+
+
         -- https://go.googlesource.com/vscode-go/+/HEAD/docs/settings.md#settings-for
         gopls = {
           analyses = {
@@ -307,7 +312,8 @@ return {
     mason_lspconfig.setup({
       ensure_installed = {
         "bashls", "gopls", "jsonls",
-        "lua_ls", "marksman", "pylsp",
+        "lua_ls", "marksman",
+        -- "pylsp",
         "rust_analyzer", "taplo", "terraformls", "tflint", "tsserver",
         "yamlls", "zls"
       }
@@ -317,7 +323,7 @@ return {
       function(server_name)
         -- Skip gopls and rust_analyzer as we manually configure them.
         -- Otherwise the following `setup()` would override our config.
-        if server_name ~= "gopls" and server_name ~= "rust_analyzer" then
+        if server_name ~= "pylsp" and server_name ~= "gopls" and server_name ~= "rust_analyzer" then
           -- Unfortunately had to if/else so I could configure 'settings' for yamlls.
           if server_name == "yamlls" then
             require("lspconfig")[server_name].setup({
