@@ -19,8 +19,13 @@ if [ ! -L ~/.zsh.d ]; then
   ln -sf "${PWD}"/.zsh.d ~/.zsh.d
 fi
 
-ln -sf "${PWD}"/.profile ~/.profile
-ln -sf "${PWD}"/.zprofile ~/.zprofile
+
+dotfiles_dir=${PWD}
+cat >>~/.zprofile - <<EOF
+if [ -f "${dotfiles_dir}/.zprofile" ]; then
+  . "${dotfiles_dir}/.zprofile"
+fi
+EOF
 
 npm install jsonlint -g
 go install github.com/mrtazz/checkmake/cmd/checkmake@latest
